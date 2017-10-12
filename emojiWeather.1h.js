@@ -2,7 +2,7 @@
 
 let request = require('request');
 
-let apiKey = '';
+let apiKey = '';    // https://home.openweathermap.org/api_keys
 let city = 'Huntsville';
 let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
 
@@ -10,13 +10,13 @@ let emojis = [
     ':cry:',        // No connection
     '::',           // 
     ':zap:',        // Thunderstorm
-    ':drizzle:',    // Rain
+    ':umbrella:',    // Rain
     '::',           // 
     ':cloud:',      // Cloudy
     ':snowflake:',  // Snow
     '::',           // 
     ':sunny:',      // Clear
-    ':tornado:']    // Extreme
+    ':cyclone:']    // Extreme
 
 request(url, function (err, response, body) {   // Collect JSON object
     if (err) {  // If no connection, so sad...
